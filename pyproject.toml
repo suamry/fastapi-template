@@ -1,0 +1,26 @@
+[project]
+name = "fastapi-app"
+version = "0.1.0"
+description = "超级无敌项目启动器"
+authors = [{ name = "lianghaoyuan", email = "lianghaoyuan@cvte.com" }]
+requires-python = ">=3.11"
+readme = "README.md"
+dependencies = [
+    "fastapi>=0.110.0",
+    "pydantic>=2.6.2",
+    "loguru>=0.7.2",
+    "path>=16.10.0",
+    "uvicorn>=0.27.1",
+    "pydantic-settings>=2.2.1",
+    "httpx (>=0.28.1,<0.29.0)",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["app"]
+
+[tool.hatch.build.targets.wheel]
+include = ["app"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
